@@ -11,3 +11,5 @@ mkdir concatenated
 # To concatenate every two images
 # Use -auto-orient so that it does not go to the original orientation but uses your modifications in finder or preview
 ls -1 IMG* | xargs -n2 sh -c 'gm convert -auto-orient $1 $2 +append concatenated/${1%%.*}_and_${2%%.*}.jpg' sh
+
+mv concatenated ..
